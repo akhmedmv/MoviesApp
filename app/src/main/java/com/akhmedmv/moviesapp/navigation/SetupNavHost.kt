@@ -5,9 +5,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.akhmedmv.moviesapp.utils.Constants
-import com.akhmedmv.screens.DetailsScreen
-import com.akhmedmv.screens.MainScreen
-import com.akhmedmv.screens.SplashScreen
+import com.akhmedmv.moviesapp.screens.DetailsScreen
+import com.akhmedmv.moviesapp.screens.MainScreen
+import com.akhmedmv.moviesapp.screens.SplashScreen
 
 sealed class Screens(val route: String) {
     object Splash : Screens(route = Constants.Screens.SPLASH_SCREEN)

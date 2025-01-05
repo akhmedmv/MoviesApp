@@ -1,4 +1,4 @@
-package com.akhmedmv.screens
+package com.akhmedmv.moviesapp.screens
 
 import androidx.compose.runtime.Composable
 

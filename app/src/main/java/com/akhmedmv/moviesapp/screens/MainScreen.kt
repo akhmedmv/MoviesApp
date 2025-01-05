@@ -1,4 +1,4 @@
-package com.akhmedmv.screens
+package com.akhmedmv.moviesapp.screens
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
