@@ -1,6 +1,6 @@
 package com.akhmedmv.moviesapp.data
 
-data class Movie(
+data class Movies(
     val _links: Links,
     val averageRuntime: Int,
     val dvdCountry: Any,

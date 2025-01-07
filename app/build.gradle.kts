@@ -8,12 +8,12 @@ plugins {
 
 android {
     namespace = "com.akhmedmv.moviesapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.akhmedmv.moviesapp"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -61,6 +61,10 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
+    implementation (libs.androidx.hilt.navigation.compose)
+    implementation(libs.coil.compose)
+    implementation("io.coil-kt:coil-compose:2.4.0")
+//    implementation (libs.glide)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.okhttp)
