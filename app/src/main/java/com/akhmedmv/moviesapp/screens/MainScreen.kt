@@ -33,7 +33,6 @@ import com.akhmedmv.moviesapp.navigation.Screens
 @Composable
 fun MainScreen(navController: NavController, viewModel: MainViewModel) {
     val allMovies = viewModel.allMovies.observeAsState(listOf()).value
-    viewModel.getAllMovies()
     Surface(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -76,7 +75,6 @@ fun MovieItem(item: Movies, navController: NavController) {
                 error = painterResource(R.drawable.ic_broken_image),
                 placeholder = painterResource(R.drawable.loading_img),
                 contentDescription = null,
-//                contentScale = ContentScale.Crop,
                 modifier = Modifier.size(128.dp)
             )
             Column {

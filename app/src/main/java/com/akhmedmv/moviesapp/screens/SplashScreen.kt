@@ -33,15 +33,19 @@ fun SplashScreen(navController: NavController, viewModel: MainViewModel) {
     val alphaAnimation =
         animateFloatAsState(
             targetValue = if (startAnimate) 1f else 0f,
-            label = "",
-            animationSpec = tween(durationMillis = 3000)
+            animationSpec = tween(durationMillis = 1500),
+            label = ""
         )
 
     LaunchedEffect(key1 = true) {
         startAnimate = true
         viewModel.getAllMovies()
-        delay(4000)
-        navController.navigate(Screens.Main.route)
+        delay(2000)
+        navController.navigate(Screens.Main.route) {
+            popUpTo(Screens.Splash.route) {
+                inclusive = true
+            }
+        }
     }
     Splash(alpha = alphaAnimation.value)
 }
@@ -57,7 +61,7 @@ fun Splash(alpha: Float) {
                 .size(120.dp)
                 .alpha(alpha = alpha),
             imageVector = Icons.Default.PlayArrow,
-            contentDescription = "null",
+            contentDescription = "Splash icon",
             tint = Color.Black
         )
     }
